@@ -27,6 +27,82 @@
     [self addGaugeOne];
     
     [self addGaugeTwo];
+    
+    [self addGaugeThree];
+}
+- (void)addGaugeThree {
+    
+    
+    gauge = [[SGaugeRadial alloc] initWithFrame:CGRectOffset(CGRectMake(0, 0, 250, 250), 700, 40)
+                                    fromMinimum:@0 toMaximum:@1];
+    gauge.qualitativeRanges = @[
+                                [SGaugeQualitativeRange rangeWithMinimum:@0 withMaximum:@0.75 withColor:UIColorFromRGB(0x09BF5D)],
+                                [SGaugeQualitativeRange rangeWithMinimum:@0.75 withMaximum:@0.99 withColor:UIColorFromRGB(0xFFB637)],
+                                [SGaugeQualitativeRange rangeWithMinimum:@0.99 withMaximum:nil withColor:UIColorFromRGB(0xF5474F)]];
+    
+    gauge.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:gauge];
+        
+    // tick
+    gauge.axis.majorTickFrequency = 0.250f;
+    gauge.axis.minorTickFrequency = 0.025f;
+    
+    NSNumberFormatter* formatter = [NSNumberFormatter new];
+    formatter.numberStyle = NSNumberFormatterPercentStyle;
+    gauge.axis.formatter = formatter;
+    
+    // sweep
+    gauge.arcAngleStart = -M_PI * 0.6;
+    gauge.arcAngleEnd = M_PI * 0.6;
+    gauge.style.borderIsFullCircle = NO;
+    
+    // qual ranges
+    gauge.style.qualitativeInnerPosition = 0.9f;
+    gauge.style.qualitativeOuterPosition = 0.95f;
+    gauge.style.qualitativeRangeBorderWidth = 0.0f;
+    
+    // background color
+    gauge.style.innerBackgroundColor = [UIColor clearColor];
+    gauge.style.outerBackgroundColor = [UIColor clearColor];
+    
+    
+    // needle
+    gauge.style.needleColor = UIColorFromRGB(0x00A0D7);
+    gauge.style.needleWidth = 7.0f;
+    gauge.style.needleLength = 0.75;
+    gauge.style.needleBorderWidth = 0.0f;
+    
+    // knob
+    gauge.style.knobColor = UIColorFromRGB(0x00A0D7);
+    gauge.style.knobBorderWidth = 0.0f;
+    gauge.style.knobRadius = 7.0f;
+    
+    // tick location
+    gauge.style.tickBaselinePosition = 0.88f;
+    
+    // tick styling
+    gauge.style.majorTickColor = [UIColor whiteColor];
+    gauge.style.majorTickSize = CGSizeMake(1, 8);
+    gauge.style.minorTickSize = CGSizeMake(1, 6);
+    gauge.style.minorTickColor = [UIColor whiteColor];
+    gauge.style.tickMarkAlignment = SGaugeTickAlignTop;
+    
+    // glass
+    gauge.style.showGlassEffect = NO;
+    
+    // labels
+    gauge.style.tickLabelOffsetFromBaseline = -30.0f;
+    gauge.style.tickLabelColor = [UIColor whiteColor];
+    gauge.style.tickLabelsRotate = NO;
+    gauge.style.tickLabelFont = [UIFont fontWithName:gauge.style.tickLabelFont.fontName size:15.0f];
+    
+    // bezel
+    gauge.style.bevelWidth = 0.0f;
+    
+    
+    // value
+    gauge.value = 0.79;
+    
 }
 
 - (void)addGaugeTwo {
@@ -113,8 +189,8 @@
     gauge.axis.minorTickFrequency = 5.0f;
     
     // sweep
-    gauge.arcAngleStart = -M_PI * 0.65;
-    gauge.arcAngleEnd = M_PI * 0.65;
+    gauge.arcAngleStart = -M_PI * 0.8;
+    gauge.arcAngleEnd = M_PI * 0.8;
     gauge.style.borderIsFullCircle = YES;
     
     // background
