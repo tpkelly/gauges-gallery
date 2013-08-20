@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7286930817C3880200D478DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7286930717C3880200D478DD /* UIKit.framework */; };
+		7286930A17C3880200D478DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7286930917C3880200D478DD /* Foundation.framework */; };
+		7286930C17C3880200D478DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7286930B17C3880200D478DD /* CoreGraphics.framework */; };
+		7286931217C3880200D478DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7286931017C3880200D478DD /* InfoPlist.strings */; };
+		7286931417C3880200D478DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7286931317C3880200D478DD /* main.m */; };
+		7286931817C3880200D478DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7286931717C3880200D478DD /* AppDelegate.m */; };
+		7286931A17C3880200D478DD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7286931917C3880200D478DD /* Default.png */; };
+		7286931C17C3880200D478DD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7286931B17C3880200D478DD /* Default@2x.png */; };
+		7286931E17C3880200D478DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7286931D17C3880200D478DD /* Default-568h@2x.png */; };
+		7286932117C3880200D478DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7286932017C3880200D478DD /* ViewController.m */; };
+		7286932417C3880200D478DD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7286932217C3880200D478DD /* ViewController.xib */; };
+		7286932B17C38C5400D478DD /* ShinobiGauges.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7286932A17C38C5400D478DD /* ShinobiGauges.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7286930417C3880200D478DD /* GaugeGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaugeGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7286930717C3880200D478DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7286930917C3880200D478DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7286930B17C3880200D478DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7286930F17C3880200D478DD /* GaugeGallery-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GaugeGallery-Info.plist"; sourceTree = "<group>"; };
+		7286931117C3880200D478DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7286931317C3880200D478DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7286931517C3880200D478DD /* GaugeGallery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GaugeGallery-Prefix.pch"; sourceTree = "<group>"; };
+		7286931617C3880200D478DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7286931717C3880200D478DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7286931917C3880200D478DD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7286931B17C3880200D478DD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7286931D17C3880200D478DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7286931F17C3880200D478DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7286932017C3880200D478DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7286932317C3880200D478DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		7286932A17C38C5400D478DD /* ShinobiGauges.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiGauges.framework; path = ShinobiGauges/ShinobiGauges.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7286930117C3880200D478DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7286930817C3880200D478DD /* UIKit.framework in Frameworks */,
+				7286930A17C3880200D478DD /* Foundation.framework in Frameworks */,
+				7286930C17C3880200D478DD /* CoreGraphics.framework in Frameworks */,
+				7286932B17C38C5400D478DD /* ShinobiGauges.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		728692FB17C3880200D478DD = {
+			isa = PBXGroup;
+			children = (
+				7286930D17C3880200D478DD /* GaugeGallery */,
+				7286930617C3880200D478DD /* Frameworks */,
+				7286930517C3880200D478DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7286930517C3880200D478DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7286930417C3880200D478DD /* GaugeGallery.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7286930617C3880200D478DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7286932A17C38C5400D478DD /* ShinobiGauges.framework */,
+				7286930717C3880200D478DD /* UIKit.framework */,
+				7286930917C3880200D478DD /* Foundation.framework */,
+				7286930B17C3880200D478DD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7286930D17C3880200D478DD /* GaugeGallery */ = {
+			isa = PBXGroup;
+			children = (
+				7286931617C3880200D478DD /* AppDelegate.h */,
+				7286931717C3880200D478DD /* AppDelegate.m */,
+				7286931F17C3880200D478DD /* ViewController.h */,
+				7286932017C3880200D478DD /* ViewController.m */,
+				7286932217C3880200D478DD /* ViewController.xib */,
+				7286930E17C3880200D478DD /* Supporting Files */,
+			);
+			path = GaugeGallery;
+			sourceTree = "<group>";
+		};
+		7286930E17C3880200D478DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7286930F17C3880200D478DD /* GaugeGallery-Info.plist */,
+				7286931017C3880200D478DD /* InfoPlist.strings */,
+				7286931317C3880200D478DD /* main.m */,
+				7286931517C3880200D478DD /* GaugeGallery-Prefix.pch */,
+				7286931917C3880200D478DD /* Default.png */,
+				7286931B17C3880200D478DD /* Default@2x.png */,
+				7286931D17C3880200D478DD /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7286930317C3880200D478DD /* GaugeGallery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7286932717C3880200D478DD /* Build configuration list for PBXNativeTarget "GaugeGallery" */;
+			buildPhases = (
+				7286930017C3880200D478DD /* Sources */,
+				7286930117C3880200D478DD /* Frameworks */,
+				7286930217C3880200D478DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GaugeGallery;
+			productName = GaugeGallery;
+			productReference = 7286930417C3880200D478DD /* GaugeGallery.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		728692FC17C3880200D478DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ShinobiControls;
+			};
+			buildConfigurationList = 728692FF17C3880200D478DD /* Build configuration list for PBXProject "GaugeGallery" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 728692FB17C3880200D478DD;
+			productRefGroup = 7286930517C3880200D478DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7286930317C3880200D478DD /* GaugeGallery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7286930217C3880200D478DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7286931217C3880200D478DD /* InfoPlist.strings in Resources */,
+				7286931A17C3880200D478DD /* Default.png in Resources */,
+				7286931C17C3880200D478DD /* Default@2x.png in Resources */,
+				7286931E17C3880200D478DD /* Default-568h@2x.png in Resources */,
+				7286932417C3880200D478DD /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7286930017C3880200D478DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7286931417C3880200D478DD /* main.m in Sources */,
+				7286931817C3880200D478DD /* AppDelegate.m in Sources */,
+				7286932117C3880200D478DD /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7286931017C3880200D478DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7286931117C3880200D478DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7286932217C3880200D478DD /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7286932317C3880200D478DD /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7286932517C3880200D478DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7286932617C3880200D478DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7286932817C3880200D478DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ShinobiGauges\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GaugeGallery/GaugeGallery-Prefix.pch";
+				INFOPLIST_FILE = "GaugeGallery/GaugeGallery-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7286932917C3880200D478DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ShinobiGauges\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GaugeGallery/GaugeGallery-Prefix.pch";
+				INFOPLIST_FILE = "GaugeGallery/GaugeGallery-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		728692FF17C3880200D478DD /* Build configuration list for PBXProject "GaugeGallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7286932517C3880200D478DD /* Debug */,
+				7286932617C3880200D478DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7286932717C3880200D478DD /* Build configuration list for PBXNativeTarget "GaugeGallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7286932817C3880200D478DD /* Debug */,
+				7286932917C3880200D478DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 728692FC17C3880200D478DD /* Project object */;
+}
