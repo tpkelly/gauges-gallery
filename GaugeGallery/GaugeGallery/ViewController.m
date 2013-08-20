@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 ShinobiControls. All rights reserved.
 
 #import "ViewController.h"
-#import <ShinobiGauges/ShinobiGauges.h>
 #import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
@@ -18,17 +17,30 @@
 @implementation ViewController
 {
     SGaugeRadial* gauge;
+    
+    SGaugeLinear *verticalLinearGauge;
+    
+    UIColor *red;
+    UIColor *orange;
+    UIColor *green;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    //Common color schemes
+    green = UIColorFromRGB(0x09BF5D);
+    orange = UIColorFromRGB(0xFFB637);
+    red = UIColorFromRGB(0xF5474F);
+    
     [self addGaugeOne];
     
     [self addGaugeTwo];
     
     [self addGaugeThree];
+    
+    [self addGaugeFour];
 }
 - (void)addGaugeThree {
     
@@ -36,9 +48,9 @@
     gauge = [[SGaugeRadial alloc] initWithFrame:CGRectOffset(CGRectMake(0, 0, 250, 250), 700, 40)
                                     fromMinimum:@0 toMaximum:@1];
     gauge.qualitativeRanges = @[
-                                [SGaugeQualitativeRange rangeWithMinimum:@0 withMaximum:@0.75 withColor:UIColorFromRGB(0x09BF5D)],
-                                [SGaugeQualitativeRange rangeWithMinimum:@0.75 withMaximum:@0.99 withColor:UIColorFromRGB(0xFFB637)],
-                                [SGaugeQualitativeRange rangeWithMinimum:@0.99 withMaximum:nil withColor:UIColorFromRGB(0xF5474F)]];
+                                [SGaugeQualitativeRange rangeWithMinimum:@0 withMaximum:@0.75 withColor:green],
+                                [SGaugeQualitativeRange rangeWithMinimum:@0.75 withMaximum:@0.99 withColor:orange],
+                                [SGaugeQualitativeRange rangeWithMinimum:@0.99 withMaximum:nil withColor:red]];
     
     gauge.backgroundColor = [UIColor blackColor];
     [self.view addSubview:gauge];
@@ -240,6 +252,70 @@
     
 }
 
+-(void)addGaugeFour
+{
+    UIView *gaugeBackground = [[UIView alloc] initWithFrame:CGRectOffset(CGRectMake(0, 0, 250, 250), 40, 350)];
+    gaugeBackground.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:gaugeBackground];
+    
+    verticalLinearGauge = [[SGaugeLinear alloc] initWithFrame:CGRectMake(0, 0, 220, 75) fromMinimum:@0 toMaximum:@100];
+    [gaugeBackground addSubview:verticalLinearGauge];
+    verticalLinearGauge.delegate = self;
+    verticalLinearGauge.value = 57;
+    
+    //Background
+    verticalLinearGauge.style.bevelWidth = 0;
+    verticalLinearGauge.style.showGlassEffect = NO;
+    verticalLinearGauge.style.innerBackgroundColor = [UIColor clearColor];
+    verticalLinearGauge.style.outerBackgroundColor = [UIColor clearColor];
+    
+    //Needle
+    verticalLinearGauge.style.needleWidth = 0;
+    verticalLinearGauge.style.needleLength = 0.4;
+    verticalLinearGauge.style.needleBorderWidth = 3;
+    verticalLinearGauge.style.needleBorderColor = [UIColor colorWithRed:0 green:160.f/255 blue:215.f/255.f alpha:1];
+    verticalLinearGauge.style.knobBorderWidth = 0;
+    
+    //Tickmarks
+    verticalLinearGauge.style.tickMarkAlignment = SGaugeTickAlignCenter;
+    verticalLinearGauge.style.tickLabelOffsetFromBaseline = 30;
+    verticalLinearGauge.style.tickBaselineWidth = 0;
+    verticalLinearGauge.style.tickLabelColor = [UIColor whiteColor];
+    
+    //Qualitative ranges
+    verticalLinearGauge.style.qualitativeInnerPosition = 0.95;
+    verticalLinearGauge.qualitativeRanges = @[[SGaugeQualitativeRange rangeWithMinimum:nil withMaximum:nil withColor:red],
+                                              [SGaugeQualitativeRange rangeWithMinimum:@20 withMaximum:@80 withColor:orange],
+                                              [SGaugeQualitativeRange rangeWithMinimum:@40 withMaximum:@60 withColor:green]];
+    
+    //Make the Gauge vertical
+    verticalLinearGauge.transform = CGAffineTransformMakeRotation(-M_PI_2);
+    verticalLinearGauge.center = CGPointMake(100, 125);
+}
+
+#pragma mark - Delegate methods
+
+-(void)gauge:(SGauge *)_gauge alterTickLabel:(UILabel *)tickLabel atValue:(float)value
+{
+    if (_gauge == verticalLinearGauge)
+    {
+        tickLabel.transform = CGAffineTransformMakeRotation(M_PI_2);
+    }
+}
+
+-(void)gauge:(SGauge *)_gauge alterTickMark:(UIView *)tickMark atValue:(float)value isMajorTick:(BOOL)majorTick
+{
+    if (_gauge == verticalLinearGauge)
+    {
+        //Match tick labels to qualitative ranges
+        if (value <= 60 && value >= 40)
+            tickMark.backgroundColor = green;
+        else if (value <= 80 && value >= 20)
+            tickMark.backgroundColor = orange;
+        else
+            tickMark.backgroundColor = red;
+    }
+}
 
 @end
 

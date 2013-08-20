@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ShinobiGauges/ShinobiGauges.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<SGaugeDelegate>
 
 @end
