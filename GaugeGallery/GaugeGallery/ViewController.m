@@ -103,7 +103,7 @@
     gauge.style.showGlassEffect = NO;
     
     // labels
-    gauge.style.tickLabelOffsetFromBaseline = -30.0f;
+    gauge.style.tickLabelOffsetFromBaseline = -50.0f;
     gauge.style.tickLabelColor = [UIColor whiteColor];
     gauge.style.tickLabelsRotate = NO;
     gauge.style.tickLabelFont = [UIFont fontWithName:gauge.style.tickLabelFont.fontName size:15.0f];
@@ -176,7 +176,7 @@
     gauge.style.showGlassEffect = NO;
     
     // labels
-    gauge.style.tickLabelOffsetFromBaseline = 20.0f;
+    gauge.style.tickLabelOffsetFromBaseline = 40.0f;
     gauge.style.tickLabelColor = UIColorFromRGB(0x00B8F3);
     gauge.style.tickLabelsRotate = YES;
     gauge.style.tickLabelFont = [UIFont fontWithName:gauge.style.tickLabelFont.fontName size:20.0f];
@@ -239,7 +239,7 @@
     gauge.style.tickBaselineWidth = 1.0f;
     
     // label offset from baseline
-    gauge.style.tickLabelOffsetFromBaseline = -30.f;
+    gauge.style.tickLabelOffsetFromBaseline = -50.f;
     
     // bevel
     gauge.style.bevelPrimaryColor = [UIColor blackColor];
@@ -258,7 +258,8 @@
     gaugeBackground.backgroundColor = [UIColor blackColor];
     [self.view addSubview:gaugeBackground];
     
-    verticalLinearGauge = [[SGaugeLinear alloc] initWithFrame:CGRectMake(0, 0, 220, 75) fromMinimum:@0 toMaximum:@100];
+    verticalLinearGauge = [[SGaugeLinear alloc] initWithFrame:CGRectMake(50, 15, 75, 220) fromMinimum:@0 toMaximum:@100];
+    verticalLinearGauge.orientation = SGaugeLinearOrientationVertical;
     [gaugeBackground addSubview:verticalLinearGauge];
     verticalLinearGauge.delegate = self;
     verticalLinearGauge.value = 57;
@@ -278,7 +279,7 @@
     
     //Tickmarks
     verticalLinearGauge.style.tickMarkAlignment = SGaugeTickAlignCenter;
-    verticalLinearGauge.style.tickLabelOffsetFromBaseline = 30;
+    verticalLinearGauge.style.tickLabelOffsetFromBaseline = 40;
     verticalLinearGauge.style.tickBaselineWidth = 0;
     verticalLinearGauge.style.tickLabelColor = [UIColor whiteColor];
     
@@ -287,21 +288,9 @@
     verticalLinearGauge.qualitativeRanges = @[[SGaugeQualitativeRange rangeWithMinimum:nil withMaximum:nil withColor:red],
                                               [SGaugeQualitativeRange rangeWithMinimum:@20 withMaximum:@80 withColor:orange],
                                               [SGaugeQualitativeRange rangeWithMinimum:@40 withMaximum:@60 withColor:green]];
-    
-    //Make the Gauge vertical
-    verticalLinearGauge.transform = CGAffineTransformMakeRotation(-M_PI_2);
-    verticalLinearGauge.center = CGPointMake(100, 125);
 }
 
 #pragma mark - Delegate methods
-
--(void)gauge:(SGauge *)_gauge alterTickLabel:(UILabel *)tickLabel atValue:(float)value
-{
-    if (_gauge == verticalLinearGauge)
-    {
-        tickLabel.transform = CGAffineTransformMakeRotation(M_PI_2);
-    }
-}
 
 -(void)gauge:(SGauge *)_gauge alterTickMark:(UIView *)tickMark atValue:(float)value isMajorTick:(BOOL)majorTick
 {
