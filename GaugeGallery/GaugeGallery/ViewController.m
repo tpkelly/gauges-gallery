@@ -103,7 +103,7 @@
     gauge.style.showGlassEffect = NO;
     
     // labels
-    gauge.style.tickLabelOffsetFromBaseline = -50.0f;
+    gauge.style.tickLabelOffsetFromBaseline = -30.0f;
     gauge.style.tickLabelColor = [UIColor whiteColor];
     gauge.style.tickLabelsRotate = NO;
     gauge.style.tickLabelFont = [UIFont fontWithName:gauge.style.tickLabelFont.fontName size:15.0f];
@@ -176,7 +176,7 @@
     gauge.style.showGlassEffect = NO;
     
     // labels
-    gauge.style.tickLabelOffsetFromBaseline = 40.0f;
+    gauge.style.tickLabelOffsetFromBaseline = 20.0f;
     gauge.style.tickLabelColor = UIColorFromRGB(0x00B8F3);
     gauge.style.tickLabelsRotate = YES;
     gauge.style.tickLabelFont = [UIFont fontWithName:gauge.style.tickLabelFont.fontName size:20.0f];
@@ -239,7 +239,7 @@
     gauge.style.tickBaselineWidth = 1.0f;
     
     // label offset from baseline
-    gauge.style.tickLabelOffsetFromBaseline = -50.f;
+    gauge.style.tickLabelOffsetFromBaseline = -30.f;
     
     // bevel
     gauge.style.bevelPrimaryColor = [UIColor blackColor];
@@ -279,7 +279,7 @@
     
     //Tickmarks
     verticalLinearGauge.style.tickMarkAlignment = SGaugeTickAlignCenter;
-    verticalLinearGauge.style.tickLabelOffsetFromBaseline = 40;
+    verticalLinearGauge.style.tickLabelOffsetFromBaseline = 30;
     verticalLinearGauge.style.tickBaselineWidth = 0;
     verticalLinearGauge.style.tickLabelColor = [UIColor whiteColor];
     
