@@ -29,6 +29,8 @@
 {
     [super viewDidLoad];
     
+    [ShinobiGauges setLicenseKey:@""]; // Add license key here
+    
     //Common color schemes
     green = UIColorFromRGB(0x09BF5D);
     orange = UIColorFromRGB(0xFFB637);
@@ -48,9 +50,9 @@
     gauge = [[SGaugeRadial alloc] initWithFrame:CGRectOffset(CGRectMake(0, 0, 250, 250), 700, 40)
                                     fromMinimum:@0 toMaximum:@1];
     gauge.qualitativeRanges = @[
-                                [SGaugeQualitativeRange rangeWithMinimum:@0 withMaximum:@0.75 withColor:green],
-                                [SGaugeQualitativeRange rangeWithMinimum:@0.75 withMaximum:@0.99 withColor:orange],
-                                [SGaugeQualitativeRange rangeWithMinimum:@0.99 withMaximum:nil withColor:red]];
+                                [SGaugeQualitativeRange rangeWithMinimum:@0 maximum:@0.75 color:green],
+                                [SGaugeQualitativeRange rangeWithMinimum:@0.75 maximum:@0.99 color:orange],
+                                [SGaugeQualitativeRange rangeWithMinimum:@0.99 maximum:nil color:red]];
     
     gauge.backgroundColor = [UIColor blackColor];
     [self.view addSubview:gauge];
@@ -69,8 +71,8 @@
     gauge.style.borderIsFullCircle = NO;
     
     // qual ranges
-    gauge.style.qualitativeInnerPosition = 0.9f;
-    gauge.style.qualitativeOuterPosition = 0.95f;
+    gauge.style.qualitativeRangeInnerPosition = 0.9f;
+    gauge.style.qualitativeRangeOuterPosition = 0.95f;
     gauge.style.qualitativeRangeBorderWidth = 0.0f;
     
     // background color
@@ -123,11 +125,11 @@
     gauge = [[SGaugeRadial alloc] initWithFrame:CGRectOffset(CGRectMake(0, 0, 250, 250), 350, 40)
                                     fromMinimum:@100 toMaximum:@200];
     gauge.qualitativeRanges = @[
-                                [SGaugeQualitativeRange rangeWithMinimum:@100 withMaximum:@120 withColor:UIColorFromRGB(0x008120)],
-                                [SGaugeQualitativeRange rangeWithMinimum:@120 withMaximum:@140 withColor:UIColorFromRGB(0x8CCE4B)],
-                                [SGaugeQualitativeRange rangeWithMinimum:@140 withMaximum:@160 withColor:UIColorFromRGB(0xFFFF4A)],
-                                [SGaugeQualitativeRange rangeWithMinimum:@160 withMaximum:@180 withColor:UIColorFromRGB(0xFFA32E)],
-                                [SGaugeQualitativeRange rangeWithMinimum:@180 withMaximum:@200 withColor:UIColorFromRGB(0xFF0009)]];
+                                [SGaugeQualitativeRange rangeWithMinimum:@100 maximum:@120 color:UIColorFromRGB(0x008120)],
+                                [SGaugeQualitativeRange rangeWithMinimum:@120 maximum:@140 color:UIColorFromRGB(0x8CCE4B)],
+                                [SGaugeQualitativeRange rangeWithMinimum:@140 maximum:@160 color:UIColorFromRGB(0xFFFF4A)],
+                                [SGaugeQualitativeRange rangeWithMinimum:@160 maximum:@180 color:UIColorFromRGB(0xFFA32E)],
+                                [SGaugeQualitativeRange rangeWithMinimum:@180 maximum:@200 color:UIColorFromRGB(0xFF0009)]];
     
     gauge.backgroundColor = UIColorFromRGB(0x493E88);
     [self.view addSubview:gauge];
@@ -142,8 +144,8 @@
     gauge.style.borderIsFullCircle = NO;
     
     // qual ranges
-    gauge.style.qualitativeInnerPosition = 0.6f;
-    gauge.style.qualitativeOuterPosition = 0.7f;
+    gauge.style.qualitativeRangeInnerPosition = 0.6f;
+    gauge.style.qualitativeRangeOuterPosition = 0.7f;
     gauge.style.qualitativeRangeBorderColor = [UIColor whiteColor];
     gauge.style.qualitativeRangeBorderWidth = 1.0f;
     
@@ -284,10 +286,10 @@
     verticalLinearGauge.style.tickLabelColor = [UIColor whiteColor];
     
     //Qualitative ranges
-    verticalLinearGauge.style.qualitativeInnerPosition = 0.95;
-    verticalLinearGauge.qualitativeRanges = @[[SGaugeQualitativeRange rangeWithMinimum:nil withMaximum:nil withColor:red],
-                                              [SGaugeQualitativeRange rangeWithMinimum:@20 withMaximum:@80 withColor:orange],
-                                              [SGaugeQualitativeRange rangeWithMinimum:@40 withMaximum:@60 withColor:green]];
+    verticalLinearGauge.style.qualitativeRangeInnerPosition = 0.95;
+    verticalLinearGauge.qualitativeRanges = @[[SGaugeQualitativeRange rangeWithMinimum:nil maximum:nil color:red],
+                                              [SGaugeQualitativeRange rangeWithMinimum:@20 maximum:@80 color:orange],
+                                              [SGaugeQualitativeRange rangeWithMinimum:@40 maximum:@60 color:green]];
 }
 
 #pragma mark - Delegate methods

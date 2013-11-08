@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47002ABE182D4D8F0064082D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47002ABD182D4D8F0064082D /* Security.framework */; };
+		47002AC0182D4D940064082D /* ShinobiGauges.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47002ABF182D4D940064082D /* ShinobiGauges.framework */; };
+		47002AC2182D4DA10064082D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47002AC1182D4DA10064082D /* QuartzCore.framework */; };
 		7286930817C3880200D478DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7286930717C3880200D478DD /* UIKit.framework */; };
 		7286930A17C3880200D478DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7286930917C3880200D478DD /* Foundation.framework */; };
 		7286930C17C3880200D478DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7286930B17C3880200D478DD /* CoreGraphics.framework */; };
@@ -18,10 +21,12 @@
 		7286931E17C3880200D478DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7286931D17C3880200D478DD /* Default-568h@2x.png */; };
 		7286932117C3880200D478DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7286932017C3880200D478DD /* ViewController.m */; };
 		7286932417C3880200D478DD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7286932217C3880200D478DD /* ViewController.xib */; };
-		7286932B17C38C5400D478DD /* ShinobiGauges.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7286932A17C38C5400D478DD /* ShinobiGauges.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47002ABD182D4D8F0064082D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		47002ABF182D4D940064082D /* ShinobiGauges.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiGauges.framework; path = Library/Frameworks/ShinobiGauges.framework; sourceTree = DEVELOPER_DIR; };
+		47002AC1182D4DA10064082D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7286930417C3880200D478DD /* GaugeGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaugeGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7286930717C3880200D478DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7286930917C3880200D478DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,7 +43,6 @@
 		7286931F17C3880200D478DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7286932017C3880200D478DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7286932317C3880200D478DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		7286932A17C38C5400D478DD /* ShinobiGauges.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiGauges.framework; path = ShinobiGauges/ShinobiGauges.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +50,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47002AC2182D4DA10064082D /* QuartzCore.framework in Frameworks */,
+				47002AC0182D4D940064082D /* ShinobiGauges.framework in Frameworks */,
+				47002ABE182D4D8F0064082D /* Security.framework in Frameworks */,
 				7286930817C3880200D478DD /* UIKit.framework in Frameworks */,
 				7286930A17C3880200D478DD /* Foundation.framework in Frameworks */,
 				7286930C17C3880200D478DD /* CoreGraphics.framework in Frameworks */,
-				7286932B17C38C5400D478DD /* ShinobiGauges.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +82,9 @@
 		7286930617C3880200D478DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7286932A17C38C5400D478DD /* ShinobiGauges.framework */,
+				47002AC1182D4DA10064082D /* QuartzCore.framework */,
+				47002ABF182D4D940064082D /* ShinobiGauges.framework */,
+				47002ABD182D4D8F0064082D /* Security.framework */,
 				7286930717C3880200D478DD /* UIKit.framework */,
 				7286930917C3880200D478DD /* Foundation.framework */,
 				7286930B17C3880200D478DD /* CoreGraphics.framework */,
@@ -268,7 +276,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/ShinobiGauges\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GaugeGallery/GaugeGallery-Prefix.pch";
@@ -283,7 +291,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/ShinobiGauges\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GaugeGallery/GaugeGallery-Prefix.pch";
@@ -312,6 +320,7 @@
 				7286932917C3880200D478DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
